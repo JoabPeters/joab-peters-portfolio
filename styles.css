@@ -12,3 +12,5 @@
 .image-caption{position:absolute;right:18px;bottom:16px;padding:10px 14px;border:1px solid rgba(93,184,255,.4);border-radius:99px;background:rgba(5,13,31,.86);font-size:.68rem;letter-spacing:.12em;color:#9fe7ff}
 .request-section{padding-top:20px}
 @media(max-width:800px){.request-hero{grid-template-columns:1fr;gap:26px;padding-top:52px}.hero-image{min-height:260px}.request-hero-art img{aspect-ratio:1.5}.service-image{height:170px}}
+
+.color-field{display:flex;align-items:center;gap:13px;min-height:48px;padding:8px 12px;border:1px solid rgba(126,169,222,.28);border-radius:12px;background:rgba(7,17,38,.72)}.color-field input[type=color]{width:52px;height:38px;padding:3px;border:0;border-radius:8px;background:transparent;cursor:pointer}.color-field span,.field-hint{font-size:.78rem;color:#9baecb;line-height:1.55}.field-hint{display:block;margin-top:8px}.request-form textarea{resize:vertical;min-height:110px}.request-form #req-extra{min-height:210px}
