@@ -109,3 +109,57 @@
 .request-form .color-field span{color:#53647d}
 @media(max-width:800px){.registration-intro{display:block;padding:22px 19px}.registration-steps{justify-content:flex-start;margin-top:20px;gap:6px}.registration-steps i{width:9px}}
 @media(max-width:520px){.registration-steps span{font-size:9px;gap:4px}.registration-steps span b{width:23px;height:23px}.registration-steps i{width:5px}}
+
+/* Multi-step registration portal layout inspired by the supplied reference */
+.registration-intro{display:block;text-align:center;margin-bottom:0;padding:30px 30px 22px;border:1px solid rgba(122,166,221,.22);border-radius:22px 22px 0 0;background:#fff;color:#233047;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.registration-intro .eyebrow{color:#3d9b70}
+.registration-intro h2{color:#25354c;font-size:clamp(25px,3vw,32px);margin:6px 0}
+.registration-intro>div>p:last-child{color:#718096;margin:0 auto;max-width:650px}
+.registration-steps{display:flex;align-items:flex-start;justify-content:center;gap:0;margin:27px auto 0;max-width:760px}
+.registration-steps span{position:relative;display:flex;flex:1;flex-direction:column;align-items:center;gap:8px;color:#8b98a9;font-size:11px;font-weight:600;z-index:1}
+.registration-steps span b{display:grid;place-items:center;width:36px;height:36px;border:2px solid #d7dee8;border-radius:50%;background:#fff;color:#8b98a9;font-size:13px}
+.registration-steps span.active,.registration-steps span.completed{color:#36a875}
+.registration-steps span.active b{border-color:#46bd83;color:#36a875;background:#fff;box-shadow:0 0 0 4px rgba(70,189,131,.10)}
+.registration-steps span.completed b{border-color:#49bf86;background:#49bf86;color:#fff}
+.registration-steps i{height:2px;flex:1;max-width:100px;margin:17px -2px 0;background:#e0e5eb}
+.request-form{margin-top:0;border:1px solid rgba(122,166,221,.22);border-top:0;border-radius:0 0 22px 22px;background:#fff;color:#26364d;padding:clamp(24px,5vw,52px);box-shadow:0 22px 65px rgba(0,0,0,.14)}
+.request-form .wizard-step[hidden]{display:none!important}
+.request-form .form-section-title{margin:0 0 28px;padding-bottom:20px;border-bottom:1px solid #e8edf3}
+.request-form .form-section-title>span{background:#eaf8f0;border:1px solid #bce9d0;color:#3ca978;box-shadow:none}
+.request-form .form-section-title h3{color:#26364d;font-size:20px}
+.request-form .form-section-title p{color:#8190a3;font-size:12px}
+.request-form .field>label{color:#44546a;font-size:12px;font-weight:600}
+.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select,.request-form .field textarea{background:#fff;color:#26364d;border:1px solid #d8e0e9;border-radius:9px;box-shadow:0 1px 2px rgba(22,40,68,.035);font-size:13px;min-height:48px;height:48px}
+.request-form .field textarea{height:auto;min-height:125px}
+.request-form .field #req-extra{min-height:210px}
+.request-form .field input::placeholder,.request-form .field textarea::placeholder{color:#9aa6b5}
+.request-form .field input:focus,.request-form .field select:focus,.request-form .field textarea:focus{border-color:#52b985;background:#fff;box-shadow:0 0 0 3px rgba(82,185,133,.13)}
+.request-form .field select{appearance:auto;color:#26364d}
+.request-form .field select option{background:#fff;color:#26364d}
+.request-form .choice{background:#f9fbfd;border:1px solid #e1e7ef;color:#526176}
+.request-form .choice:hover{background:#f1fbf5;border-color:#8ed5ae}
+.request-form .choice input{accent-color:#42b77e}
+.request-form .color-field{background:#fff;border:1px solid #d8e0e9}
+.request-form .color-field span{color:#718096}
+.request-form .consent-line{background:#f8fafc;border:1px solid #e3e9f0;color:#65758a}
+.request-form .consent-line input{accent-color:#43b77e}
+.wizard-navigation{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:38px;padding-top:22px;border-top:1px solid #e8edf3}
+.wizard-navigation button{min-width:112px;min-height:44px;padding:10px 20px;border:0;border-radius:9px;background:#49bd83;color:#fff;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 5px 14px rgba(73,189,131,.18)}
+.wizard-navigation button:hover{background:#35a971}
+.wizard-navigation .wizard-back{background:transparent;color:#43ad79;box-shadow:none;text-align:left;padding-left:0}
+.wizard-navigation .wizard-back:hover{background:transparent;color:#25885a}
+.wizard-final-hint{font-size:12px;color:#8190a3;text-align:right}
+.request-form .submit-button{width:auto;min-width:190px;min-height:48px;border-radius:10px;background:#49bd83;box-shadow:0 6px 18px rgba(73,189,131,.2)}
+.request-form .submit-button:hover{background:#35a971}
+.request-form .form-note{color:#8190a3}
+@media(max-width:650px){
+ .registration-intro{padding:24px 14px 18px}
+ .registration-steps{gap:0;margin-top:22px}
+ .registration-steps span{font-size:9px;gap:6px}
+ .registration-steps span b{width:29px;height:29px;font-size:11px}
+ .registration-steps i{margin-top:14px}
+ .request-form{padding:22px 16px}
+ .request-form .form-section-title h3{font-size:17px}
+ .wizard-navigation button{min-width:96px;padding:9px 14px}
+ .wizard-final-hint{font-size:10px}
+}
