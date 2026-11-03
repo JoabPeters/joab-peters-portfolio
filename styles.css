@@ -163,3 +163,26 @@
  .wizard-navigation button{min-width:96px;padding:9px 14px}
  .wizard-final-hint{font-size:10px}
 }
+
+/* Agency pricing page */
+.pricing-hero{padding-top:95px;padding-bottom:45px}
+.pricing-hero h1{font:600 clamp(44px,6vw,72px)/1.04 'Space Grotesk';letter-spacing:-.055em;margin:0}
+.pricing-hero .hero-intro{max-width:700px}
+.pricing-note,.pricing-footnote{color:var(--muted);font-size:12px;line-height:1.8;margin-top:22px}
+.pricing-page-section{padding-top:55px}
+.pricing-page-grid{align-items:stretch}
+.price-card{display:flex;flex-direction:column}
+.price-card ul{flex:1}
+.price-value small{font-size:12px;color:#9eacc7;font-weight:500}
+.package-duration{font-size:11px;color:#7f9cff;margin:10px 0 16px}
+.price-card .button{align-self:flex-start;margin-top:12px}
+.pricing-footnote a{color:#8db0ff;text-decoration:underline}
+.support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.support-card{border:1px solid var(--line);border-radius:15px;padding:24px;background:linear-gradient(145deg,#111a30,#0c1324)}
+.support-card h3{font:600 17px 'Space Grotesk';margin:0 0 12px}
+.support-card p{font-size:13px;line-height:1.9;color:#d4def4}
+.support-card small{font-size:11px;color:var(--muted);line-height:1.7}
+.promotion-disclaimer{margin-top:25px;padding:20px 22px;border:1px solid #6c91ff38;border-radius:13px;background:#182543;color:#bdc9e2;font-size:12px;line-height:1.8}
+.promotion-disclaimer b{color:#fff}
+@media(max-width:800px){.support-grid{grid-template-columns:1fr 1fr}.pricing-hero{padding-top:65px}}
+@media(max-width:560px){.support-grid{grid-template-columns:1fr}.pricing-hero{padding-top:50px}.pricing-page-section{padding-top:35px}}
