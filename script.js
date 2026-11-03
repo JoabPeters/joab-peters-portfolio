@@ -6,7 +6,7 @@ const yearNode=document.getElementById('year');if(yearNode)yearNode.textContent=
   const form=document.getElementById('request-form');
   const progress=document.querySelector('.registration-steps');
   if(!form||!progress)return;
-  const labels=['Contact','Website','Business','Brand','Growth','Review'];
+  const labels=['Contact','Website','Business','Brand','Features','Growth'];
   progress.innerHTML=labels.map((label,i)=>'<span data-step="'+i+'"><b>'+(i+1)+'</b> '+label+'</span>').join('<i aria-hidden="true"></i>');
   const original=[...form.children];
   const steps=[];
