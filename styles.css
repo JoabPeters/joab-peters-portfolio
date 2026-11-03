@@ -42,3 +42,24 @@
 .request-form .submit-button{min-height:56px;border-radius:17px;font-size:14px;box-shadow:0 12px 32px rgba(54,106,255,.25)}
 .request-form .field-hint{font-size:11px;color:#9aacc9;line-height:1.65}
 @media(max-width:600px){.request-form{padding:18px 14px;border-radius:20px}.request-form .form-grid{gap:18px}.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select{min-height:53px;border-radius:16px}.request-form .form-section-title{margin-top:28px}.request-form .form-section-title h3{font-size:16px}}
+
+
+/* Registration-style form polish */
+.request-form{border:1px solid rgba(117,164,255,.3);border-radius:30px;padding:clamp(22px,4vw,44px);background:linear-gradient(155deg,rgba(13,25,47,.98),rgba(5,12,26,.99));box-shadow:0 28px 90px rgba(0,0,0,.34),0 0 45px rgba(25,111,255,.07)}
+.request-form .field{gap:10px}
+.request-form .field>label{font-size:12px;font-weight:750;letter-spacing:.035em;color:#e8efff;padding-left:4px}
+.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select,.request-form .field textarea{min-height:60px;padding:16px 20px;border:2px solid rgba(185,204,236,.62);border-radius:22px;background:#080f20;color:#f8fbff;font-size:14px;box-shadow:inset 0 2px 7px rgba(0,0,0,.22),0 1px 0 rgba(255,255,255,.025);transition:border-color .2s,box-shadow .2s,background .2s}
+.request-form .field textarea{min-height:145px;border-radius:22px;line-height:1.7}
+.request-form .field #req-extra{min-height:260px}
+.request-form .field input:hover,.request-form .field select:hover,.request-form .field textarea:hover{border-color:rgba(119,203,255,.88)}
+.request-form .field input:focus,.request-form .field select:focus,.request-form .field textarea:focus{border-color:#52dff5;background:#0d1b32;box-shadow:0 0 0 5px rgba(82,223,245,.13),0 0 28px rgba(31,139,255,.12);transform:none}
+.request-form .field input::placeholder,.request-form .field textarea::placeholder{color:#8d9db9}
+.request-form .field select{border-radius:22px}
+.request-form .form-section-title{margin:42px 0 26px;padding:0 0 19px;border-bottom:1px solid rgba(149,180,230,.24)}
+.request-form .form-section-title>span{width:46px;height:46px;flex-basis:46px;border-radius:16px;font-size:13px;box-shadow:0 5px 20px rgba(42,146,255,.13)}
+.request-form .choice{min-height:54px;border-radius:18px;padding:14px 16px;background:rgba(13,26,47,.85)}
+.request-form .color-field{min-height:66px;border:2px solid rgba(185,204,236,.55);border-radius:22px;padding:10px 15px}
+.request-form .color-field input[type=color]{width:60px;height:44px;border-radius:12px}
+.request-form .consent-line{border-radius:19px;padding:20px}
+.request-form .submit-button{min-height:62px;border-radius:20px;letter-spacing:.015em}
+@media(max-width:600px){.request-form{padding:20px 15px;border-radius:24px}.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select{min-height:57px;padding:14px 16px;border-radius:19px}.request-form .field textarea{border-radius:19px}.request-form .form-section-title{margin-top:32px}}
