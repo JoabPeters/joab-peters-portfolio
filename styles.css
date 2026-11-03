@@ -63,3 +63,21 @@
 .request-form .consent-line{border-radius:19px;padding:20px}
 .request-form .submit-button{min-height:62px;border-radius:20px;letter-spacing:.015em}
 @media(max-width:600px){.request-form{padding:20px 15px;border-radius:24px}.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select{min-height:57px;padding:14px 16px;border-radius:19px}.request-form .field textarea{border-radius:19px}.request-form .form-section-title{margin-top:32px}}
+
+
+/* Clean labelled input style inspired by the supplied registration example */
+.request-form .field{display:flex;flex-direction:column;gap:8px}
+.request-form .field>label{display:block;padding:0 0 0 1px;font-size:13px;font-weight:500;letter-spacing:0;color:#e4ebf8;line-height:1.45}
+.request-form .field>label::after{content:""}
+.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select,.request-form .field textarea{width:100%;min-height:45px;height:45px;padding:11px 14px;border:1px solid rgba(180,196,220,.48);border-radius:10px;background:#0b1426;color:#f5f8ff;font-family:inherit;font-size:13px;line-height:1.45;box-shadow:none;outline:none;transform:none}
+.request-form .field textarea{height:auto;min-height:115px;padding:13px 14px;resize:vertical}
+.request-form .field #req-extra{min-height:230px}
+.request-form .field input:not([type=checkbox]):not([type=color]):hover,.request-form .field select:hover,.request-form .field textarea:hover{border-color:rgba(156,190,232,.8)}
+.request-form .field input:not([type=checkbox]):not([type=color]):focus,.request-form .field select:focus,.request-form .field textarea:focus{border-color:#56c9ed;background:#0e1a30;box-shadow:0 0 0 3px rgba(86,201,237,.12);transform:none}
+.request-form .field input::placeholder,.request-form .field textarea::placeholder{color:#8796ad;opacity:1}
+.request-form .field select{padding-right:38px;border-radius:10px;background-position:calc(100% - 18px) 19px,calc(100% - 12px) 19px,0 0}
+.request-form .color-field{min-height:45px;height:45px;padding:5px 9px;border:1px solid rgba(180,196,220,.48);border-radius:10px;background:#0b1426}
+.request-form .color-field input[type=color]{width:40px;height:32px;padding:2px}
+.request-form .form-grid{gap:20px 22px}
+.request-form .form-section-title{margin:34px 0 22px}
+@media(max-width:600px){.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select{min-height:45px;height:45px;padding:10px 12px;border-radius:10px}.request-form .field textarea{height:auto}.request-form .form-grid{gap:17px}}
