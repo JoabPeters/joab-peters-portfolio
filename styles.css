@@ -81,3 +81,31 @@
 .request-form .form-grid{gap:20px 22px}
 .request-form .form-section-title{margin:34px 0 22px}
 @media(max-width:600px){.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select{min-height:45px;height:45px;padding:10px 12px;border-radius:10px}.request-form .field textarea{height:auto}.request-form .form-grid{gap:17px}}
+
+/* Registration portal presentation */
+.registration-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin:0 0 22px;padding:28px 30px;border:1px solid rgba(105,162,255,.24);border-radius:24px;background:linear-gradient(120deg,rgba(17,34,63,.96),rgba(8,17,34,.95))}
+.registration-intro h2{margin:8px 0 9px;font-size:clamp(25px,3vw,36px);letter-spacing:-.04em;color:#f6f9ff}
+.registration-intro>div>p:last-child{margin:0;max-width:530px;color:#aabbd5;font-size:13px;line-height:1.7}
+.registration-steps{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.registration-steps span{display:flex;align-items:center;gap:7px;color:#8294b1;font-size:10px;font-weight:650;white-space:nowrap}
+.registration-steps span b{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;border:1px solid rgba(155,180,222,.36);font-size:11px}
+.registration-steps span.active{color:#80e9f6}.registration-steps span.active b{background:#126bff;border-color:#4eafff;color:white;box-shadow:0 0 16px rgba(38,128,255,.35)}
+.registration-steps i{width:19px;height:1px;background:rgba(155,180,222,.28)}
+.request-form{border-radius:24px;background:linear-gradient(145deg,rgba(12,23,43,.98),rgba(6,13,27,.99));padding:clamp(22px,4vw,42px)}
+.request-form .field>label{font-size:13px;font-weight:650;letter-spacing:0;color:#e8efff;padding-left:1px}
+.request-form .field input:not([type=checkbox]):not([type=color]),.request-form .field select,.request-form .field textarea{min-height:58px;border:1.5px solid rgba(174,194,225,.48);border-radius:12px;background:#f7f9fd;color:#17243a;padding:15px 17px;font-size:14px;box-shadow:inset 0 1px 2px rgba(10,30,60,.04);transition:border-color .18s,box-shadow .18s,background .18s}
+.request-form .field textarea{min-height:130px;line-height:1.65;resize:vertical}
+.request-form .field #req-extra{min-height:230px}
+.request-form .field input::placeholder,.request-form .field textarea::placeholder{color:#8995a8}
+.request-form .field input:hover,.request-form .field select:hover,.request-form .field textarea:hover{border-color:#8aaee8}
+.request-form .field input:focus,.request-form .field select:focus,.request-form .field textarea:focus{outline:none;border-color:#4389f5;background:#fff;box-shadow:0 0 0 4px rgba(67,137,245,.15);transform:none}
+.request-form .field select{appearance:auto;color:#17243a;background:#f7f9fd}
+.request-form .field select option{background:#fff;color:#17243a}
+.request-form .field input[type=date]{color-scheme:light}
+.request-form .form-section-title{margin-top:38px}
+.request-form .form-section-title>span{border-radius:12px;background:rgba(34,115,255,.18)}
+.request-form .choice{border-radius:12px}
+.request-form .color-field{border-radius:12px;background:#f7f9fd;border:1.5px solid rgba(174,194,225,.55)}
+.request-form .color-field span{color:#53647d}
+@media(max-width:800px){.registration-intro{display:block;padding:22px 19px}.registration-steps{justify-content:flex-start;margin-top:20px;gap:6px}.registration-steps i{width:9px}}
+@media(max-width:520px){.registration-steps span{font-size:9px;gap:4px}.registration-steps span b{width:23px;height:23px}.registration-steps i{width:5px}}
