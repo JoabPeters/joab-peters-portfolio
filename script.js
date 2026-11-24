@@ -96,7 +96,7 @@ const revealItems=document.querySelectorAll('.service-card,.price-card');if('Int
  const API='https://open.er-api.com/v6/latest/USD', KEY='jpDigitalUsdNgnRate', TIME='jpDigitalUsdNgnRateTime', INTERVAL=3600000;
  const fmt=n=>'$'+Math.round(n).toLocaleString('en-US');
  const getNums=t=>(t.match(/[0-9][0-9,]*/g)||[]).map(x=>Number(x.replace(/,/g,'')));
- function sourceFor(el){const prev=el.previousElementSibling;if(prev){const a=getNums(prev.textContent);if(a.length)return a;}return [];}
+ function sourceFor(el){const prev=el.previousElementSibling;if(prev){const a=getNums(prev.textContent);if(a.length)return a;}const before=(el.parentElement.textContent||'').split(el.textContent)[0];const fallback=getNums(before);return fallback.length?fallback:[];}
  function apply(rate,stamp,label){
   document.querySelectorAll('.fx-inline').forEach(el=>{const lo=Number(el.dataset.ngnMin),hi=Number(el.dataset.ngnMax);if(lo&&hi)el.textContent='≈ '+fmt(lo/rate)+'–'+fmt(hi/rate)+' USD';});
   document.querySelectorAll('.price-usd').forEach(el=>{const nums=sourceFor(el);if(!nums.length)return;const values=nums.map(n=>fmt(n/rate));const monthly=/month/i.test((el.parentElement.textContent||'').slice(0,120));el.textContent='≈ '+values.join('–')+(monthly?' / month':'')+' USD';});
