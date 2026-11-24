@@ -284,3 +284,7 @@
 .support-card .original-price{display:inline;font-size:inherit}
 .support-card .discounted-price{display:inline;color:#70e0a6;font-weight:800}
 .discount-hanger{background:linear-gradient(145deg,#ff334f,#bd001e 72%);border-color:#ff8793;box-shadow:0 15px 28px rgba(0,0,0,.32),0 0 20px rgba(255,42,72,.2),inset 0 2px 0 rgba(255,255,255,.4)}
+
+/* Clear dual-currency pricing and 50% offer presentation */
+.price-usd{display:block;color:#aebbd4;font-size:11px;font-weight:600;line-height:1.35;margin-top:3px}.price-usd-sale{color:#8ce9b6;font-size:12px}.price-value .original-price{color:#aab5ca}.price-value .discounted-price{color:#82efad}.support-card .price-usd{display:inline-block;margin-left:4px;font-size:10px}.support-card h3 .price-usd{display:inline-block;font-size:10px;font-weight:600}.price-card .discount-hanger{pointer-events:none}
+@media(max-width:600px){.price-usd{font-size:10px}.price-usd-sale{font-size:11px}}
