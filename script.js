@@ -89,3 +89,20 @@ const revealItems=document.querySelectorAll('.service-card,.price-card');if('Int
  update();
  window.setInterval(update,1000);
 })();
+
+
+/* Live USD/NGN estimates: NGN prices remain the authoritative service prices. */
+(function(){
+ const API='https://open.er-api.com/v6/latest/USD', KEY='jpDigitalUsdNgnRate', TIME='jpDigitalUsdNgnRateTime', INTERVAL=3600000;
+ const fmt=n=>'$'+Math.round(n).toLocaleString('en-US');
+ const getNums=t=>(t.match(/[0-9][0-9,]*/g)||[]).map(x=>Number(x.replace(/,/g,'')));
+ function sourceFor(el){const prev=el.previousElementSibling;if(prev){const a=getNums(prev.textContent);if(a.length)return a;}return [];}
+ function apply(rate,stamp,label){
+  document.querySelectorAll('.price-usd').forEach(el=>{const nums=sourceFor(el);if(!nums.length)return;const values=nums.map(n=>fmt(n/rate));const monthly=/month/i.test((el.parentElement.textContent||'').slice(0,120));el.textContent='≈ '+values.join('–')+(monthly?' / month':'')+' USD';});
+  const rateEl=document.getElementById('fx-rate-value'),timeEl=document.getElementById('fx-rate-updated');
+  if(rateEl)rateEl.textContent='$1 = ₦'+rate.toLocaleString('en-US',{maximumFractionDigits:2});
+  if(timeEl)timeEl.textContent='Source: '+label+' · Updated '+new Date(stamp).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
+ }
+ async function refresh(){try{const res=await fetch(API,{cache:'no-store'});if(!res.ok)throw Error('Rate service unavailable');const data=await res.json();const rate=Number(data&&data.rates&&data.rates.NGN);if(!rate)throw Error('NGN rate missing');const stamp=Date.now();localStorage.setItem(KEY,String(rate));localStorage.setItem(TIME,String(stamp));apply(rate,stamp,'open.er-api.com');}catch(e){const rate=Number(localStorage.getItem(KEY)),stamp=Number(localStorage.getItem(TIME));if(rate)apply(rate,stamp,'cached open.er-api.com rate');else{const t=document.getElementById('fx-rate-updated');if(t)t.textContent='Live rate unavailable. Naira prices remain visible; USD estimates will appear when the service is reachable.';}}}
+ const cached=Number(localStorage.getItem(KEY)),stamp=Number(localStorage.getItem(TIME));if(cached)apply(cached,stamp,'cached open.er-api.com rate');if(!cached||!stamp||Date.now()-stamp>INTERVAL)refresh();window.setInterval(refresh,INTERVAL);
+})();
