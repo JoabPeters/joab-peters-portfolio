@@ -98,6 +98,7 @@ const revealItems=document.querySelectorAll('.service-card,.price-card');if('Int
  const getNums=t=>(t.match(/[0-9][0-9,]*/g)||[]).map(x=>Number(x.replace(/,/g,'')));
  function sourceFor(el){const prev=el.previousElementSibling;if(prev){const a=getNums(prev.textContent);if(a.length)return a;}return [];}
  function apply(rate,stamp,label){
+  document.querySelectorAll('.fx-inline').forEach(el=>{const lo=Number(el.dataset.ngnMin),hi=Number(el.dataset.ngnMax);if(lo&&hi)el.textContent='≈ '+fmt(lo/rate)+'–'+fmt(hi/rate)+' USD';});
   document.querySelectorAll('.price-usd').forEach(el=>{const nums=sourceFor(el);if(!nums.length)return;const values=nums.map(n=>fmt(n/rate));const monthly=/month/i.test((el.parentElement.textContent||'').slice(0,120));el.textContent='≈ '+values.join('–')+(monthly?' / month':'')+' USD';});
   const rateEl=document.getElementById('fx-rate-value'),timeEl=document.getElementById('fx-rate-updated');
   if(rateEl)rateEl.textContent='$1 = ₦'+rate.toLocaleString('en-US',{maximumFractionDigits:2});
