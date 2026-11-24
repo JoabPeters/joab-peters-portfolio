@@ -275,3 +275,12 @@
 .discount-hanger::after{top:-11px;left:calc(50% - 7px);width:14px;height:14px;border-width:3px}
 .discount-hanger small{font-size:23px;letter-spacing:.13em;margin-top:7px}
 @media(max-width:600px){.discount-hanger{top:-12px;right:12px;width:112px;height:91px;font-size:41px}.discount-hanger::before{top:-34px;height:34px}.discount-hanger::after{width:12px;height:12px;left:calc(50% - 6px)}.discount-hanger small{font-size:18px;margin-top:5px}}
+
+
+/* Clear, premium 50% sale price presentation */
+.price-value{display:flex;flex-direction:column;align-items:flex-start;gap:5px;line-height:1.15}
+.price-value .original-price,.original-price{display:block;color:#9aa7bd;font-size:clamp(13px,1.2vw,16px);font-weight:600;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:#ff6677;opacity:.9}
+.price-value .discounted-price,.discounted-price{display:block;color:#70e0a6;font-size:inherit;font-weight:800;text-decoration:none}
+.support-card .original-price{display:inline;font-size:inherit}
+.support-card .discounted-price{display:inline;color:#70e0a6;font-weight:800}
+.discount-hanger{background:linear-gradient(145deg,#ff334f,#bd001e 72%);border-color:#ff8793;box-shadow:0 15px 28px rgba(0,0,0,.32),0 0 20px rgba(255,42,72,.2),inset 0 2px 0 rgba(255,255,255,.4)}
